@@ -1,7 +1,13 @@
-# AngularBoilerplate
+# Angular Boilerplate
+Boilerplate para trabajar con Angular, este proyecto listo para trabajar las pruebas unitarias con [Jestjs](https://jestjs.io) y eslint. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+## Installation
 
+* `$ git clone https://github.com/bezael/angular-boilerplate.git`
+* `$ cd angular-boilerplate/`
+* `$ npm install`
+* `$ ng serve`
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
