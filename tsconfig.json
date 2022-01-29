@@ -12,6 +12,12 @@
       ],
       "@shared/*": [
         "src/app/shared/*"
+      ],
+      "@pages/*": [
+        "src/app/pages/*"
+      ],
+      "@components/*": [
+        "src/app/components/*"
       ]
     },
     "outDir": "./dist/out-tsc",
