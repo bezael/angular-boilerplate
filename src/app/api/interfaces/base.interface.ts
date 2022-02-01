@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 export interface RequestOptions {
   headers?: HttpHeaders | { [header: string]: string | string[] },
-  observe?: 'body' | 'events' | 'response',
+  observe?: 'body',
   params?: HttpParams | { [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean> },
   reportProgress?: boolean,
   responseType?: 'json',
