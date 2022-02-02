@@ -21,29 +21,27 @@ export class BaseService implements BaseInterface {
    * @returns {Observable<T>}
    */
   public get<T>(endPoint: string, options?: RequestOptions): Observable<T> {
-    return this.http.get<T>(this.API + endPoint, options);
+    return this.http.get<T>(`${this.API}${endPoint}`, options);
   }
 
   /**
    * POST request
    * @param {string} endPoint end point of the api
-   * @param {Object} params body of the request.
    * @param {RequestOptions} options options of the request like headers, body, etc.
    * @returns {Observable<T>}
    */
-  public post<T>(endPoint: string, params: Object, options?: RequestOptions): Observable<T> {
-    return this.http.post<T>(this.API + endPoint, params, options);
+  public post<T>(endPoint: string, options?: RequestOptions): Observable<T> {
+    return this.http.post<T>(`${this.API}${endPoint}`, options);
   }
 
   /**
    * PUT request
    * @param {string} endPoint end point of the api
-   * @param {Object} params body of the request.
    * @param {RequestOptions} options options of the request like headers, body, etc.
    * @returns {Observable<T>}
    */
-  public put<T>(endPoint: string, params: Object, options?: RequestOptions): Observable<T> {
-    return this.http.put<T>(this.API + endPoint, params, options);
+  public put<T>(endPoint: string, options?: RequestOptions): Observable<T> {
+    return this.http.put<T>(`${this.API}${endPoint}`, options);
   }
 
   /**
@@ -53,7 +51,7 @@ export class BaseService implements BaseInterface {
    * @returns {Observable<T>}
    */
   public delete<T>(endPoint: string, options?: RequestOptions): Observable<T> {
-    return this.http.delete<T>(this.API + endPoint, options);
+    return this.http.delete<T>(`${this.API}${endPoint}`, options);
   }
 
 }

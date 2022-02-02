@@ -14,9 +14,9 @@ export interface RequestOptions {
 export interface BaseInterface {
   get<T>(endPoint: string, options?: RequestOptions): Observable<T>;
 
-  post<T>(endPoint: string, params: Object, options?: RequestOptions): Observable<T>;
+  post<T>(endPoint: string, options?: RequestOptions): Observable<T>;
 
-  put<T>(endPoint: string, params: Object, options?: RequestOptions): Observable<T>;
+  put<T>(endPoint: string, options?: RequestOptions): Observable<T>;
 
   delete<T>(endPoint: string, options?: RequestOptions): Observable<T>;
 }
