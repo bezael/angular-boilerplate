@@ -12,6 +12,7 @@ import { WeatherComponent } from './weather.component';
   imports: [
     CommonModule,
     WeatherRoutingModule
-  ]
+  ],
+  exports: [WeatherComponent]
 })
 export class WeatherModule { }

@@ -10,6 +10,7 @@ export class WeatherComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
