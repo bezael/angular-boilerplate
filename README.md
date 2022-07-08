@@ -4,8 +4,8 @@ Boilerplate para trabajar con Angular, este proyecto listo para trabajar las pru
 Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 ## Installation
 
-* `$ git clone https://github.com/bezael/angular-boilerplate.git`
-* `$ cd angular-boilerplate/`
+* `$ git clone https://github.com/bezael/weatherApp.git`
+* `$ cd weatherApp/`
 * `$ npm install`
 * `$ ng serve`
 ## Development server

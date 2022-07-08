@@ -1,0 +1,15 @@
+@import "variables";
+.search {
+  margin-top: 1.5rem;
+  //.search__input {
+  &__input {
+    border-bottom: 2px solid rgba(156, 163, 175, 0.44);
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    width: 100%;
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $main-color;
+    }
+  }
+}

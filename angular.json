@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-boilerplate": {
+    "weatherApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-boilerplate",
+            "outputPath": "dist/weatherApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -33,7 +33,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/sass"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -72,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-boilerplate:build:production"
+              "browserTarget": "weatherApp:build:production"
             },
             "development": {
-              "browserTarget": "angular-boilerplate:build:development"
+              "browserTarget": "weatherApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-boilerplate:build"
+            "browserTarget": "weatherApp:build"
           }
         },
         "test": {
@@ -112,7 +117,7 @@
       }
     }
   },
-  "defaultProject": "angular-boilerplate",
+  "defaultProject": "weatherApp",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }
