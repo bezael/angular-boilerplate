@@ -33,7 +33,7 @@
     "@angular-eslint/template-parser": "14.1.2",
     "@angular/cli": "^14.2.6",
     "@angular/compiler-cli": "^14.2.7",
-    "@briebug/jest-schematic": "^4.0.0",
+    "@briebug/jest-schematic": "^2.1.1",
     "@types/jest": "latest",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
