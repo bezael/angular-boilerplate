@@ -1,18 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { environment } from '@env/environment';
 import { Observable } from 'rxjs';
 import { BaseInterface, RequestOptions } from '@api/interfaces/base.interface';
 /**
- * A service that extends from Angular HttpClient 
+ * A service that extends from Angular HttpClient
  */
 @Injectable({ providedIn: 'root' })
-
 export class BaseService implements BaseInterface {
-
   private readonly API = `${environment.apiUrl}/`;
-
-  constructor(public readonly http: HttpClient) { }
+  private readonly http = inject(HttpClient);
 
   /**
    * GET request
@@ -53,5 +50,4 @@ export class BaseService implements BaseInterface {
   public delete<T>(endPoint: string, options?: RequestOptions): Observable<T> {
     return this.http.delete<T>(`${this.API}${endPoint}`, options);
   }
-
 }
