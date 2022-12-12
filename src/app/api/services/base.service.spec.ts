@@ -1,3 +1,5 @@
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TestBed} from '@angular/core/testing';
 import {BaseService} from './base.service';
 
 interface MockAPI {
@@ -9,9 +11,14 @@ interface MockAPI {
 describe('base service', () => {
   let service: BaseService;
 
+  TestBed.configureTestingModule(
+    {
+      providers: [ BaseService],
+      imports: [ HttpClientModule]
+    }
+  )
   beforeEach(() => {
-    debugger;
-    service = new BaseService();
+    service = TestBed.inject(BaseService)
   })
 
   it('get return observable of type', () => {
