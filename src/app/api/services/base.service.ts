@@ -13,6 +13,16 @@ export class BaseService implements BaseInterface {
 
   /**
    * GET request
+   * @param {string} endPoint end point for the get by Id
+   * @param {RequestOptions} options options of the request like headers, body, etc.
+   * @returns {Observable<T>}
+   */
+  public getById<T>(endPoint: string, options?: RequestOptions): Observable<T> {
+    return this.http.get<T>(`${this.API}${endPoint}`, options);
+  }
+
+  /**
+   * GET request
    * @param {string} endPoint end point for the get
    * @param {RequestOptions} options options of the request like headers, body, etc.
    * @returns {Observable<T>}
