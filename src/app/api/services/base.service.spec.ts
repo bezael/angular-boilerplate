@@ -43,7 +43,7 @@ describe('base service', () => {
     httpTestingController.verify()
   })
 
-  it('get fake response', () => {service.get<ApiResponseModel>(API_FAKE_RESOURCE).subscribe((response) => {
+  it('get resource', () => {service.get<ApiResponseModel>(API_FAKE_RESOURCE).subscribe((response) => {
       expect(response).toEqual(mockAPIResponse)
     })
     const httpRequest = httpTestingController.expectOne(API_FAKE_HOST_RESOURCE)
@@ -51,7 +51,7 @@ describe('base service', () => {
 
   })
 
-  it('post ', () => {
+  it('post resource ', () => {
     const fakePost = mockAPIResponse[0];
     service.post<ApiResponseModel>(API_FAKE_RESOURCE).subscribe((response: ApiResponseModel) => {
       expect(response).toEqual(fakePost)
