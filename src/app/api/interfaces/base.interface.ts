@@ -7,12 +7,12 @@ export interface RequestOptions {
   params?:
     | HttpParams
     | {
-        [param: string]:
-          | string
-          | number
-          | boolean
-          | ReadonlyArray<string | number | boolean>
-      },
+    [param: string]:
+      | string
+      | number
+      | boolean
+      | ReadonlyArray<string | number | boolean>
+  },
   reportProgress?: boolean,
   responseType?: 'json',
   withCredentials?: boolean,
